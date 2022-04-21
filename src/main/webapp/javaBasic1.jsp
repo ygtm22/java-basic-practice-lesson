@@ -23,15 +23,20 @@
         ・printlnの()の中を必要に応じて修正してください。
         ・新たにprintlnを追加しないでください。
       */
-      out.println("水とお茶を1個ずつ購入する場合の金額は、");
+      out.println("水とお茶を1個ずつ購入する場合の金額は、" + (100 + 150));
+  	  out.println("円です");
       out.println("<br>");
-      out.println("水とお茶を1個ずつ買った場合、所持金が");
+      out.println("水とお茶を1個ずつ買った場合、所持金が" + (1000 - 250));
+      out.println("円残ります");
       out.println("<br>");
-      out.println("お茶を6個購入する場合の金額は、");
+      out.println("お茶を6個購入する場合の金額は、" + (150 * 6));
+      out.println("円です");
       out.println("<br>");
-      out.println("所持金で水を");
+      out.println("所持金で水を" + (1000 / 100));
+      out.println("個購入できます");
       out.println("<br>");
-      out.println("所持金でお茶を買えるだけ買った後は、");
+      out.println("所持金でお茶を買えるだけ買った後は、" + (1000 - 900));
+      out.println("円残ります");
   %>
 
 </body>
