@@ -19,6 +19,7 @@
     	}else{
 	    	int _num1 = Integer.parseInt(num1);
 	    	int _num2 = Integer.parseInt(num2);
+
 	    	
 	    	String calculation = request.getParameter("operator");
 	    	switch(calculation){
