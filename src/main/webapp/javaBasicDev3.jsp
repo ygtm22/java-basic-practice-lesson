@@ -10,12 +10,12 @@
 	String str = null;
 	String dis = null;
     // 表示するメッセージ用の変数
+    dis =("数値を入力してください");
     if (num1 != null && num2 != null){
-    	dis =("数値を入力してください");
-    	if(num1.isEmpty() || num2.isEmpty()){
-    		dis = ("数値を入力してください");
-    	}else if(num1.isEmpty() && num2.isEmpty()){
+    	if(num1.isEmpty() && num2.isEmpty()){
     		dis = ("数値が両方とも未入力です");
+    	}else if(num1.isEmpty() || num2.isEmpty()){
+    		dis = ("数値を入力してください");
     	}else{
 	    	int _num1 = Integer.parseInt(num1);
 	    	int _num2 = Integer.parseInt(num2);
@@ -24,16 +24,16 @@
 	    	String calculation = request.getParameter("operator");
 	    	switch(calculation){
 	    	case "add":
-	    		out.println(_num1 + _num2);
+	    		dis = (num1 + "+" + num2 + "=" + (_num1 + _num2));
 	    		break;
 	    	case "sub":
-	    		out.println(_num1 - _num2);
+	    		dis = (num1 + "-" + num2 + "=" + (_num1 - _num2));
 	    		break;
 	    	case "mul":
-	    		out.println(_num1 * _num2);
+	    		dis = (num1 + "×" + num2 + "=" + (_num1 * _num2));
 	    		break;
 	    	case "div":
-	    		out.println(_num1 / _num2);
+	    		dis = (num1 + "÷" + num2 + "=" + (_num1 / _num2));
 	    		break;
 	    	}
     	}
