@@ -6,12 +6,22 @@
 <%
 
     // 入力値を取得
+    request.setCharacterEncoding("UTF-8");
+	String product1 = request.getParameter("product1");
+	String product2 = request.getParameter("product2");
+	String amount1 = request.getParameter("amount1");
+	String amount2 = request.getParameter("amount2");
+	String btn = request.getParameter("btn");
 
     // 数値に変換
+    int amount1 = 
+    
 
     // ポイントを定義
+    int point = 0;
 
     // メソッドを呼んでポイントを取得
+    //point = ParamUtil.getPoint(amount);
 
 %>
 
@@ -38,14 +48,14 @@
       <th>ポイント</th>
     </tr>
     <tr>
-      <td>xxx</td>
-      <td class="right">xxx</td>
-      <td class="right">xxx</td>
+      <td><%=product1 %></td>
+      <td class="right"><%=amount1 %></td>
+      <td class="right"><%=point %></td>
     </tr>
     <tr>
-      <td>xxx</td>
-      <td class="right">xxx</td>
-      <td class="right">xxx</td>
+      <td><%=product2 %></td>
+      <td class="right"><%=amount2 %></td>
+      <td class="right"><%=point %></td>
     </tr>
   </table>
 
