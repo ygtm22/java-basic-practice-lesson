@@ -20,10 +20,14 @@ public class ParamUtil {
     /**
      * ポイント計算(ランクあり)
      */
-	public static int getPint(int amount, int rank) {
+	public static int getPoint(int amount, int rank) {
 		int point = 0;
 		
-		point = amount * rank;
+		if (rank == 1) {
+			point = (int) (amount * 0.02);
+		}else if (rank == 2) {
+			point = (int) (amount *  0.03);
+		}
 		
 		return point;
 	}
