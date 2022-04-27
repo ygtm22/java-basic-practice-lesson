@@ -21,7 +21,7 @@ public class Utility {
       2) 変数widthとheightを使って、面積を計算し、returnしてください。
          ただし、double型に変換して、返却してください。
         (キャスト演算子を使ってください)
-
+		
       <isNullOrEmptyメソッド>
       1) このメソッドは、引数に指定した文字列がnull、または空文字かを
          判定するメソッドですが、今は必ずfalseが返ってくるようになっています。
@@ -29,15 +29,24 @@ public class Utility {
          それ以外の場合は、falseを返すように修正してください。
 
     */
-
+	
     /**
      * 引数を数値に変換し、三角形の面積を求める
      */
     public static double getTriangleArea(String widthStr, String heightStr) {
         int width = 0;
         int height = 0;
-
-        return 0;
+        
+        if (!isNullOrEmpty(widthStr)) {
+        	width = Integer.parseInt(widthStr);
+          }
+        if (!isNullOrEmpty(heightStr)) {
+        	  height = Integer.parseInt(heightStr);
+          }
+        
+        double triangle = (double) width * height / 2.0;
+        
+        return triangle;
     }
 
     /**
@@ -47,7 +56,16 @@ public class Utility {
         int width = 0;
         int height = 0;
 
-        return 0;
+        if (!isNullOrEmpty(widthStr)) {
+        	width = Integer.parseInt(widthStr);
+          }
+        if (!isNullOrEmpty(heightStr)) {
+        	  height = Integer.parseInt(heightStr);
+          }
+        
+        double rectangle = (double) width * height;
+        
+        return (double) rectangle;
     }
 
     /**
@@ -56,6 +74,10 @@ public class Utility {
     public static boolean isNullOrEmpty(String str) {
         // todo:引数の値がnull、または空文字の場合は、true
         // それ以外の場合は、falseを返すように処理を修正する
-        return false;
+    	if (str == null || str.isEmpty()) {
+    		return true;
+    	}else {
+    		return false;
+    	}
     }
 }

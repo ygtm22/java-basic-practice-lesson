@@ -16,6 +16,17 @@
     // Utilityクラス内のメソッドを呼んで結果を取得
     // 三角形、長方形のどちらのボタンを押したかを判断し、
     // 押したボタンに対応するメソッドを呼ぶ
+    
+    double triangleResult = Utility.getTriangleArea(widthStr, heightStr);
+    double rectangleResult = Utility.getRectangleArea(widthStr, heightStr);
+    
+    if (btn.equals("triangle") || btn.equals("rectangle")){
+    	if (btn.equals("triangle")){
+    		result = triangleResult;
+    	}else if (btn.equals("rectangle")){
+    		result = rectangleResult;
+    	}
+    }
 
 %>
 
@@ -30,7 +41,7 @@
 
   <h2>計算結果</h2>
   <p>
-    面積：<%=result%><br>
+    面積：<%=triangleResult%><br>
   </p>
   <a href="javaBasic5_input.jsp">戻る</a>
 </body>
